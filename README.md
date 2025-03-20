@@ -1,4 +1,4 @@
-# PostgreSQL container image with pgvector for Bitnami PostgreSQL Helm Chart
+# PostgreSQL container image with pgvector for Bitnami PostgreSQL Helm Chart 🐘
 
 The PostgreSQL container image includes pgvector. By using this image, you can deploy PostgreSQL with pgvector to Kubernetes using [Bitnami PostgreSQL Helm Chart](https://github.com/bitnami/charts/tree/main/bitnami/postgresql).
 
@@ -8,7 +8,7 @@ The PostgreSQL container image includes pgvector. By using this image, you can d
 
 ## Usage
 
-1. Set image configurations in your custom values file for example `postgresql.yaml`.
+1. Set image configurations in your custom values file for example `postgresql.yaml`. You can see the sample values file [here](./sample/postgresql.yaml).
 
    ```yaml
    global:

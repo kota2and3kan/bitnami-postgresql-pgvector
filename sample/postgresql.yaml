@@ -1,0 +1,28 @@
+# Sample values file for temporary testing in a local environment
+
+global:
+  security:
+    allowInsecureImages: true
+
+image:
+  registry: "ghcr.io"
+  repository: "kota2and3kan/bitnami-postgresql-pgvector"
+  tag: "17"
+
+auth:
+  postgresPassword: postgres
+
+postgresqlDataDir: /tmp/data
+
+primary:
+  persistence:
+    enabled: false
+  service:
+    type: ClusterIP
+  livenessProbe:
+    enabled: false
+  readinessProbe:
+    enabled: false
+  extendedConfiguration: |
+    max_connections = 4096
+  resourcesPreset: none
