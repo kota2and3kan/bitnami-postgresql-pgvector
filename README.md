@@ -1,0 +1,1 @@
+# bitnami-postgresql-pgvector
