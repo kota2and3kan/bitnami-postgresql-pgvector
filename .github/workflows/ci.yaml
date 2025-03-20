@@ -18,6 +18,11 @@ jobs:
 
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        version:
+          - 17
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -25,10 +30,10 @@ jobs:
       - name: Hadolint
         uses: hadolint/hadolint-action@v3.1.0
         with:
-          dockerfile: Dockerfile
+          dockerfile: ./postgresql${{ matrix.version }}/Dockerfile
 
       - name: Build container images
-        run: docker build -t "bitnami-postgresql-pgvector:ci" .
+        run: docker build -t "bitnami-postgresql-pgvector:${{ matrix.version }}" ./postgresql${{ matrix.version }}/
 
       - name: Check container images
         run: docker image ls
