@@ -6,11 +6,13 @@ on:
       - main
     paths-ignore:
       - '**.md'
+      - 'sample/**'
   push:
     branches:
       - main
     paths-ignore:
       - '**.md'
+      - 'sample/**'
   workflow_dispatch:
 
 jobs:
