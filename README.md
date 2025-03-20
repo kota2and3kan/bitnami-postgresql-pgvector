@@ -31,9 +31,9 @@ The PostgreSQL container image includes pgvector. By using this image, you can d
      oci://registry-1.docker.io/bitnamicharts/postgresql
    ```
 
-1. Enable pgvector in PostgreSQL.
+1. (Optional) Check if pgvector is enabled in PostgreSQL.
 
    ```console
-   kubectl exec -it postgresql-pgvector-0 -- psql -U postgres -c 'CREATE EXTENSION IF NOT EXISTS vector' -c '\dx'
+   kubectl exec -it postgresql-pgvector-0 -- psql -U postgres -c '\dx'
    ```
    - Note: You must enter the password of `postgres` user that you specified to the `--set auth.postgresPassword=********` option in the previous step.
