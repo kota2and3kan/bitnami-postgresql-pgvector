@@ -34,6 +34,6 @@ The PostgreSQL container image includes pgvector. By using this image, you can d
 1. (Optional) Check if pgvector is enabled in PostgreSQL.
 
    ```console
-   kubectl exec -it postgresql-pgvector-0 -- psql -U postgres -c '\dx'
+   kubectl exec -it postgresql-pgvector-0 -- psql -U postgres -c '\dx vector'
    ```
    - Note: You must enter the password of `postgres` user that you specified to the `--set auth.postgresPassword=********` option in the previous step.
